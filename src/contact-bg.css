@@ -1,0 +1,8 @@
+
+/* Contact and About page background utility */
+.contact-bg {
+  background-image: url('../public/solar-field-bg.jpg'); /* Try relative path if absolute fails */
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}

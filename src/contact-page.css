@@ -1,0 +1,588 @@
+/* --- Services Page Styles --- */
+.services-bg {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #f3f3f3;
+}
+.services-hero {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.services-hero-video {
+  border-radius: 18px;
+  box-shadow: 0 8px 32px 0 rgba(31,38,135,0.18);
+  max-width: 700px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+.services-title {
+  font-family: 'Space Grotesk', 'Poppins', Arial, sans-serif;
+  font-weight: 900;
+  font-size: 2.5rem;
+  color: #222;
+  margin-top: 2rem;
+  text-align: center;
+  letter-spacing: 1.2px;
+}
+.services-underline {
+  width: 90px;
+  height: 5px;
+  border-radius: 3px;
+  margin: 0.5rem auto 2rem auto;
+  background: linear-gradient(90deg, #FFD700 0%, #FF6600 60%, #FF3300 100%);
+}
+.services-desc {
+  font-family: 'Space Grotesk', 'Poppins', Arial, sans-serif;
+  color: #444;
+  font-size: 1.15rem;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.7;
+}
+/* Flex for icon + text buttons */
+.contact-btn-flex {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+/* Reduce map box height for compact look */
+.compact-map-box {
+  height: 160px !important;
+  min-height: 0 !important;
+  max-height: 180px !important;
+}
+/* Force Space Grotesk for all text on contact page */
+.contact-bg, .contact-bg * {
+  font-family: 'Space Grotesk', 'Poppins', Arial, sans-serif !important;
+}
+/* --- Screenshot-inspired Contact Page Layout --- */
+.contact-screenshot-layout {
+  min-height: 100vh;
+  width: 100vw;
+  background: linear-gradient(rgba(20,20,20,0.35), rgba(20,20,20,0.35)), url('/solar-field-bg.jpg') center center/cover no-repeat fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.contact-screenshot-card {
+  background: rgba(255,255,255,0.18);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px 0 rgba(31,38,135,0.25);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  border: 1.5px solid rgba(255,255,255,0.22);
+  padding: 2.5rem 2rem 2rem 2rem;
+  max-width: 420px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+}
+.contact-screenshot-header {
+  color: #fff;
+  font-size: 3.2rem;
+  font-family: 'Space Grotesk', 'Poppins', Arial, sans-serif;
+  font-weight: 900;
+  text-align: center;
+  letter-spacing: 1.5px;
+  margin-top: 32px;
+  margin-bottom: 12px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+.contact-screenshot-underline {
+  width: 90px;
+  height: 5px;
+  border-radius: 3px;
+  margin: 0 auto 1.5rem auto;
+  background: linear-gradient(90deg, #FFD700 0%, #FF6600 60%, #FF3300 100%);
+}
+.contact-screenshot-title {
+  color: #fff;
+  font-size: 1.35rem;
+  font-family: 'Space Grotesk', 'Poppins', Arial, sans-serif;
+  font-weight: 700;
+  margin-bottom: 18px;
+  text-align: center;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.contact-screenshot-map {
+  width: 320px;
+  height: 220px;
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  margin-bottom: 22px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  border: none;
+}
+.contact-screenshot-directions {
+  background: #00B074;
+  color: #fff;
+  margin-top: 8px;
+  font-family: 'Space Mono', 'monospace', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 28px;
+  padding: 0.7rem 2rem 0.7rem 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.13);
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.13s, box-shadow 0.13s;
+  text-decoration: none;
+  outline: none;
+}
+.contact-screenshot-directions:hover {
+  background: #00995c;
+  transform: scale(1.04);
+}
+@media (max-width: 600px) {
+  .contact-screenshot-card { padding: 1.2rem 0.5rem; }
+  .contact-screenshot-header { font-size: 2.1rem; }
+  .contact-screenshot-map { width: 98vw; min-width: 0; height: 180px; }
+}
+/* --- ABOUT PAGE STYLES --- */
+.about-root {
+  width: 100vw;
+  min-height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('/solar-field-bg.jpg') center center/cover no-repeat fixed;
+  font-family: 'Space Mono', 'monospace', Arial, sans-serif;
+  overflow-x: hidden;
+}
+.about-hero {
+  position: relative;
+  min-height: 56vh;
+  width: 100vw;
+  background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url('/solar-field-bg.jpg') center center/cover no-repeat fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.about-hero-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 1;
+}
+.about-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  width: 100vw;
+  padding: 5.5rem 1.5rem 3.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.about-hero-title {
+  color: #fff;
+  font-family: 'Space Grotesk', 'Poppins', Arial, sans-serif;
+  font-size: 3.2rem;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+.about-hero-underline {
+  width: 110px;
+  height: 5px;
+  border-radius: 3px;
+  margin: 0 auto 1.5rem auto;
+  background: linear-gradient(90deg, #FFD700 0%, #FF6600 60%, #FF3300 100%);
+}
+.about-hero-tagline {
+  color: #fff;
+  font-family: 'Space Mono', 'monospace', Arial, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+.about-section {
+  width: 100vw;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+}
+.about-intro {
+  background: transparent;
+  padding: 0 0 2.5rem 0;
+}
+.about-glass-card {
+  background: rgba(255,255,255,0.18);
+  border-radius: 22px;
+  box-shadow: 0 8px 32px 0 rgba(31,38,135,0.10);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1.5px solid rgba(255,255,255,0.22);
+  padding: 2.5rem 2.5rem 2rem 2.5rem;
+  max-width: 600px;
+  margin: -3.5rem auto 0 auto;
+  z-index: 2;
+}
+.about-section-title {
+  color: #222;
+  font-family: 'Space Grotesk', 'Poppins', Arial, sans-serif;
+  font-size: 2.1rem;
+  font-weight: 800;
+  margin-bottom: 1.1rem;
+  letter-spacing: 1.2px;
+  text-align: left;
+}
+.about-section-title.center {
+  text-align: center;
+}
+.about-section-text {
+  color: #555;
+  font-family: 'Space Mono', 'monospace', Arial, sans-serif;
+  font-size: 1.13rem;
+  line-height: 1.8;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+.about-mission-vision {
+  background: transparent;
+  position: relative;
+  padding: 2.5rem 0 2.5rem 0;
+  z-index: 1;
+}
+.about-mv-bg {
+  display: none;
+}
+.about-mv-cards {
+  display: flex;
+  flex-direction: row;
+  gap: 2.5rem;
+  justify-content: center;
+  align-items: stretch;
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.about-mv-card {
+  background: rgba(255,255,255,0.18);
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  padding: 2rem 2.2rem 1.5rem 2.2rem;
+  min-width: 260px;
+  max-width: 350px;
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+.about-mv-icon {
+  font-size: 2.2rem;
+  margin-bottom: 0.7rem;
+}
+.about-mv-title {
+  font-family: 'Space Grotesk', 'Poppins', Arial, sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 0.5rem;
+}
+.about-mv-text {
+  font-family: 'Space Mono', 'monospace', Arial, sans-serif;
+  color: #555;
+  font-size: 1.08rem;
+  text-align: center;
+}
+.about-values {
+  background: transparent;
+  padding: 2.5rem 0 2.5rem 0;
+}
+.about-values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.2rem;
+  max-width: 900px;
+  margin: 1.5rem auto 0 auto;
+}
+.about-value {
+  background: rgba(255,255,255,0.18);
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  padding: 1.5rem 1.2rem 1.2rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.about-value-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.about-value-title {
+  font-family: 'Space Grotesk', 'Poppins', Arial, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 0.2rem;
+}
+.about-value-text {
+  font-family: 'Space Mono', 'monospace', Arial, sans-serif;
+  color: #555;
+  font-size: 0.98rem;
+  line-height: 1.5;
+}
+.about-cta-section {
+  position: relative;
+  min-height: 260px;
+  width: 100vw;
+  background: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url('/solar-field-bg.jpg') center center/cover no-repeat fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.about-cta-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.75);
+  z-index: 1;
+}
+.about-cta-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  width: 100vw;
+  padding: 3.5rem 1.5rem 3.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.about-cta-text {
+  color: #fff;
+  font-family: 'Space Grotesk', 'Poppins', Arial, sans-serif;
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+.about-cta-btn {
+  background: linear-gradient(90deg, #FF6600 0%, #FF3300 100%);
+  color: #fff;
+  font-family: 'Space Grotesk', 'Poppins', Arial, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 28px;
+  padding: 0.9rem 2.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.13);
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.13s, box-shadow 0.13s;
+}
+.about-cta-btn:hover {
+  background: linear-gradient(90deg, #FFD700 0%, #FF6600 60%, #FF3300 100%);
+  transform: scale(1.06);
+  box-shadow: 0 4px 16px rgba(255,102,0,0.18);
+}
+/* Animations */
+.fade-in {
+  animation: fadeInAbout 1.2s cubic-bezier(.4,0,.2,1);
+}
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUpAbout 1.1s cubic-bezier(.4,0,.2,1) forwards;
+}
+@keyframes fadeInAbout {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes fadeUpAbout {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* Responsive */
+@media (max-width: 900px) {
+  .about-mv-cards {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: stretch;
+  }
+  .about-values-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+  }
+}
+@media (max-width: 600px) {
+  .about-hero-title { font-size: 2.1rem; }
+  .about-section-title { font-size: 1.3rem; }
+  .about-glass-card { padding: 1.2rem 0.7rem; }
+  .about-mv-card { padding: 1.2rem 0.7rem; }
+  .about-values-grid { grid-template-columns: 1fr; }
+  .about-cta-content { padding: 2rem 0.5rem; }
+}
+/* Utility for icon margin */
+.icon-margin-right {
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+}
+
+/* Remove border from iframe via class */
+.contact-map-iframe {
+  border: 0;
+}
+/* Contact Page Styles */
+.contact-bg {
+  min-height: 100vh;
+  width: 100vw;
+  background: linear-gradient(rgba(20,20,20,0.55), rgba(20,20,20,0.55)), url('/solar-field-bg.jpg') center center/cover no-repeat fixed;
+  animation: fadeInBg 1.2s cubic-bezier(.4,0,.2,1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+@keyframes fadeInBg {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.contact-glass-card {
+  background: rgba(255,255,255,0.18);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px 0 rgba(31,38,135,0.25);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1.5px solid rgba(255,255,255,0.22);
+  padding: 2.5rem 2rem 2rem 2rem;
+  max-width: 420px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+}
+.contact-header {
+  color: #fff;
+  font-size: 3.2rem;
+  font-weight: 900;
+  text-align: center;
+  font-family: 'Poppins', 'Inter', Arial, sans-serif;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.25);
+  margin-top: 48px;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+}
+.contact-header-underline {
+  width: 90px;
+    margin-top: 144px;
+    margin-bottom: 8px;
+  margin: 0 auto 1.5rem auto;
+  background: linear-gradient(90deg, #FFD700 0%, #FF6600 60%, #FF3300 100%);
+}
+.contact-title {
+  color: #fff;
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+  text-align: center;
+  font-family: 'Poppins', 'Inter', Arial, sans-serif;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.contact-map {
+  width: 320px;
+  height: 220px;
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  margin-bottom: 22px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  border: none;
+}
+@media (max-width: 600px) {
+  .contact-glass-card { padding: 1.2rem 0.5rem; }
+  .contact-header { font-size: 2.1rem; }
+  .contact-map { width: 98vw; min-width: 0; height: 180px; }
+}
+.contact-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 28px;
+  padding: 0.7rem 2rem 0.7rem 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.13);
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.13s, box-shadow 0.13s;
+  text-decoration: none;
+  outline: none;
+}
+.btn-call {
+  background: #FF6600;
+  color: #fff;
+  position: fixed;
+  top: 32px;
+  right: 32px;
+  z-index: 30;
+}
+.btn-call:hover {
+  background: #FF3300;
+  transform: scale(1.06);
+  box-shadow: 0 4px 16px rgba(255,102,0,0.18);
+}
+.btn-directions {
+  background: #00B074;
+  color: #fff;
+  margin-top: 8px;
+}
+.btn-directions:hover {
+  background: #00995c;
+  transform: scale(1.04);
+}
+.btn-whatsapp {
+  background: #25D366;
+  color: #fff;
+  position: fixed;
+  left: 32px;
+  bottom: 32px;
+  z-index: 30;
+  border-radius: 28px;
+  height: 56px;
+  padding: 0 24px 0 16px;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.13s, box-shadow 0.13s;
+}
+.btn-whatsapp:hover {
+  background: #128C7E;
+  transform: scale(1.08);
+}
