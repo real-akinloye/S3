@@ -1,5 +1,4 @@
-
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function Navigation() {
   const navLinks = [
@@ -11,23 +10,20 @@ export default function Navigation() {
     { name: 'Contact', to: '/contact' },
   ];
   const [open, setOpen] = useState(false);
-  const [visible, setVisible] = useState(true);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 10) {
-        setVisible(false);
-      } else {
-        setVisible(true);
-      }
+      setScrolled(window.scrollY > 8);
     };
+    handleScroll();
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
-    <nav className={`w-full fixed top-0 left-0 z-50 bg-transparent font-spaceGrotesk transition-opacity duration-300 animate-fade-in ${visible ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}> 
-      <div className="flex items-center justify-between px-6 py-4 lg:px-12">
+    <nav className={`w-full fixed top-0 left-0 z-50 font-spaceGrotesk transition-colors duration-300 ${scrolled ? 'bg-white/80 backdrop-blur border-b border-black/5 shadow-sm' : 'bg-transparent'}`}> 
+      <div className="flex items-center justify-between px-6 py-3 lg:px-12">
         {/* Logo left */}
         <a href="/" className="flex items-center gap-2">
           <img src="/logo.jpg" alt="Logo" className="h-10 w-auto" />
@@ -38,7 +34,7 @@ export default function Navigation() {
             <a
               key={link.name}
               href={link.to}
-              className="text-primary text-xl font-bold hover:text-secondary transition text-center font-clash"
+              className="text-primary text-lg font-bold hover:text-secondary transition text-center font-clash"
             >
               {link.name}
             </a>
@@ -47,7 +43,7 @@ export default function Navigation() {
             href="https://wa.me/2348146249855?text=Hello%2C%20I%20would%20like%20a%20solar%20quotation"
             target="_blank"
             rel="noopener noreferrer"
-            className="ml-8 px-8 py-3 rounded-pill bg-gradient-to-r from-primary to-secondary text-white font-extrabold text-xl shadow-xl border-2 border-primary transition-all duration-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-secondary"
+            className="ml-8 px-6 py-2.5 rounded-pill bg-gradient-to-r from-primary to-secondary text-white font-extrabold text-base shadow-lg border-2 border-primary transition-all duration-200 hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-secondary"
           >
             Get a Quote
           </a>
@@ -58,7 +54,7 @@ export default function Navigation() {
           aria-label="Toggle menu"
           onClick={() => setOpen(!open)}
         >
-          <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
+          <svg className={`w-8 h-8 ${scrolled ? 'text-blue-900' : 'text-white'}`} fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
             {open ? (
               <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
             ) : (
