@@ -16,15 +16,13 @@ import Services from './pages/services';
 
 function Home() {
   return (
-  <div className="min-h-screen font-poppins bg-transparent">
-      <Navigation />
+    <div className="min-h-screen font-poppins bg-transparent">
       <HeroSection />
       <AboutSection />
       <WhyChooseSection />
       <ServicesSection />
       <TestimonialsSection />
       {/* <ContactSection /> */}
-  <Footer />
     </div>
   );
 }
@@ -33,14 +31,17 @@ function App() {
   return (
     <Router>
       <div className="min-h-screen font-poppins bg-transparent flex flex-col">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/products" element={<div><Services /></div>} />
-        </Routes>
-  {/* Footer is rendered inside Home and other pages, so only one Footer is needed. */}
+        <Navigation />
+        <div className="flex-1 pt-16">{/* account for fixed nav height */}
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/products" element={<div><Services /></div>} />
+          </Routes>
+        </div>
+        <Footer />
       </div>
     </Router>
   );

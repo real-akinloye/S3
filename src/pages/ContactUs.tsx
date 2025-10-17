@@ -1,4 +1,3 @@
-import { useState } from "react";
 import '../contact-assets.css';
 
 export default function ContactUs() {

@@ -5,7 +5,6 @@ export default function Navigation() {
     { name: 'Home', to: '/' },
     { name: 'About', to: '/about' },
     { name: 'Products', to: '/products' },
-    { name: 'Solutions', to: '/solutions' },
     { name: 'Services', to: '/services' },
     { name: 'Contact', to: '/contact' },
   ];
@@ -34,7 +33,7 @@ export default function Navigation() {
             <a
               key={link.name}
               href={link.to}
-              className="text-primary text-lg font-bold hover:text-secondary transition text-center font-clash"
+              className={`${scrolled ? 'text-primary hover:text-secondary' : 'text-white hover:text-blue-200'} text-lg font-bold transition text-center font-clash`}
             >
               {link.name}
             </a>
