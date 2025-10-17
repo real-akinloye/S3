@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function Footer() {
   return (
     <footer className="bg-footer text-accent pt-16 pb-8 px-4 font-spaceGrotesk mt-auto shadow-footer animate-fade-in">
